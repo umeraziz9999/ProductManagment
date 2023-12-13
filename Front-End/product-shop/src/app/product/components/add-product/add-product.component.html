@@ -1,0 +1,29 @@
+<form [formGroup]="addProductForm" class="formdata" (ngSubmit)="addproduct()">
+    <div>
+        <h3 *ngIf="!isEdit">Add New Product</h3>
+        <h3 *ngIf="isEdit">Update Product</h3>
+
+        <div class="form-input">
+            <label for="name">Product Name</label>
+            <input type="text" id="name" formControlName="productName"/>
+        </div>
+        <app-form-error [control]="addProductForm.controls['productName']" [isSubmitted]="isSubmitted" [name]="'Name'"></app-form-error>
+
+        <div class="form-input">
+            <label for="price">Product Price</label>
+            <input type="text" id="price" formControlName="price"/>
+        </div>
+        <app-form-error [control]="addProductForm.controls['price']" [isSubmitted]="isSubmitted" [name]="'Price'"></app-form-error>
+        
+        <div class="form-input">
+            <label for="quantity">Product Quantity</label>
+            <input type="text" id="quantity" formControlName="quantity"/>
+        </div>
+
+        <app-form-error [control]="addProductForm.controls['quantity']" [isSubmitted]="isSubmitted" [name]="'Quantity'"></app-form-error>
+
+        <div>
+            <button type="submit">{{btnText}}</button>
+        </div>
+    </div>
+</form>

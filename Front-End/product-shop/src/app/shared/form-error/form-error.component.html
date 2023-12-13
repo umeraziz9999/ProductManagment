@@ -1,0 +1,11 @@
+<ng-container *ngIf="(control.invalid && (control.dirty || control.touched) || isSubmitted)">
+    <div class="form-error" *ngIf="control.errors?.required">
+        {{name}} is required.
+    </div>
+    <div class="form-error" *ngIf="control.errors?.min">
+        {{name}} cannot be less than 0.
+    </div>
+    <div class="form-error" *ngIf="control.errors?.pattern">
+        {{name}} is only numeric.
+    </div>
+</ng-container>

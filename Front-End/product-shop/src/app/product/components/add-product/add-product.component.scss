@@ -1,0 +1,19 @@
+.formdata{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.form-input{
+    margin: 15px 0px;
+    label{
+        padding-right: 15px;
+        margin-bottom: 15px;
+    }
+    input{
+        width: 100%;
+    }
+}
+button{
+    width: 100%;
+    margin-top:15px
+}
